@@ -1,0 +1,116 @@
+.game {
+	max-width: 800px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	min-height: calc(100% - 120px);
+	.pitch {
+		font-size: 24px;
+		line-height: 1.2;
+		margin: 15px 0;
+		text-align: center;
+		font-style: italic;
+		position: relative;
+		padding: 0 20px;
+		box-sizing: border-box;
+		margin-bottom: 30px;
+	}
+	.result-response {
+		height: 41.5px;
+		display: flex;
+		border-radius: 3px;
+		gap: 15px;
+		margin-bottom: 30px;
+		.try {
+			background: transparent;
+			width: calc(100% / 3);
+			border-radius: 3px;
+			position: relative;
+			height: 100%;
+			border: 1px solid rgb(232, 234, 237);
+			visibility: hidden;
+			&-percentage {
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-radius: 3px;
+				background: transparent;
+				transition: all .8s;
+				right: 100%;
+				&-res {
+					position: absolute;
+					top: 50%;
+					left: 10px;
+					transform: translateY(-50%);
+					color: #e8eaed;
+					z-index: 1;
+					text-shadow: 1px 1px 3px #202124;
+				}
+			}
+		}
+	}
+	.game-keyboard {
+		padding: 0 20px;
+		box-sizing: border-box;
+		#response {
+			width: 100%;
+			min-height: 30px;
+			font-size: 100%;
+			border: none;
+			outline: none;
+			line-height: 1;
+			margin: 30px 0;
+			padding: 10px;
+			background: #e8eaed;
+			color: #202124;
+			box-sizing: border-box;
+			border-radius: 3px;
+		}
+		#validate_response {
+			min-width: calc(100% / 3);
+			height: 41.5px;
+			padding: 0;
+			text-align: center;
+			margin: auto;
+			display: block;
+			cursor: pointer;
+			background: #202124;
+			border: 1px solid #e8eaed;
+			border-radius: 3px;
+			color: #e8eaed;
+			min-width: 185px;
+			transition: .2s;
+			margin-bottom: 30px;
+			&:hover {
+				background: #e8eaed;
+				color: #202124;
+			}
+		}
+		.off {
+			min-width: calc(100% / 3);
+			height: 41.5px;
+			padding: 0;
+			text-align: center;
+			margin: auto;
+			display: block;
+			cursor: not-allowed;
+			background: #202124;
+			border: 1px solid #e8eaed;
+			border-radius: 3px;
+			color: #e8eaed;
+			min-width: 185px;
+		}
+		.wrapper_simple-keyboard {
+			max-width: 495px;
+			margin: auto;
+			.simple-keyboard {
+				max-width: 100%;
+				margin: auto;
+				color: #202124;
+				font-family: 'Roboto Mono', monospace !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+footer {
+	text-align: center;
+	padding-bottom: 6px;
+}
+.cookie-banner {
+	position: fixed;
+	bottom: 0;
+	color: #202124;
+	text-align: center;
+	width: 100%;
+	&-inner {
+		padding: 20px;
+		box-sizing: border-box;
+		max-width: 800px;
+		margin: auto;
+		padding-bottom: 0;
+	}
+	&-content {
+		position: relative;
+		width: 100%;
+		background: #e8eaed;
+		padding: 15px;
+		box-sizing: border-box;
+	}
+}
